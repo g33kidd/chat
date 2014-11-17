@@ -9,6 +9,9 @@ Router.route('chat', {
 	}
 });
 
-Router.route('video', {
-	path: '/videochat'
+Router.route('videochat', {
+	path: '/chat/:name/video',
+	data: function() {
+		return Chats.findOne({name: this.params.name});
+	}
 });
