@@ -6,3 +6,9 @@
 meteor-platform
 autopublish
 insecure
+iron:router
+accounts-twitter
+accounts-ui
+less
+mrt:moment
+

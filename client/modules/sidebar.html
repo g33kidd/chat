@@ -1,0 +1,40 @@
+<template name="sidebar">
+
+	<div class="sidebar">
+		<div class="user">
+			{{#if currentUser}}
+				{{currentUser.services.twitter.screenName}}
+			{{/if}}
+			{{> userActions}}
+		</div>
+
+		{{#if currentUser}}
+		<div class="section my-chats">
+			<div class="title">My Chats</div>
+			{{#each myChats}}
+				<div class="chat">
+					<a href="{{pathFor 'chat'}}">{{name}}</a>
+				</div>
+			{{/each}}
+		</div>
+		{{/if}}
+		
+		<div class="section public-chats">
+			<div class="title">Public Chats</div>
+			{{#each chats}}
+				<div class="chat">
+					<a href="{{pathFor 'chat'}}">{{name}}</a>
+				</div>
+			{{/each}}
+		</div>
+	</div>
+
+</template>
+
+<template name="userActions">
+	{{#if currentUser}}
+	<a href="#" id="logout">Logout</a>
+	{{else}}
+	<button id="login" class="twitter-login">Twitter Login</button>
+	{{/if}}
+</template>

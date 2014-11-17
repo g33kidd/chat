@@ -1,0 +1,30 @@
+<template name="chat">
+	<div class="chatWindow">
+		<!-- <div class="chat-actions">
+			<button>Action</button>
+			<button>Action</button>
+		</div> -->
+
+		<div class="chat-messages">
+			{{#each messages}}
+				{{> chatItem}}
+			{{/each}}
+		</div>
+		
+		{{#if currentUser}}
+		<div class="composer">
+			<input type="text" class="chat-composer">
+		</div>
+		{{else}}
+		{{> userActions}}
+		{{/if}}
+	</div>
+</template>
+
+<template name="chatItem">
+	<div class="message-block">
+		<div class="username">{{username}}</div>
+		<div class="message">{{message}}</div>
+		<div class="timeago" title="{{created}}">{{timeago}}</div>
+	</div>
+</template>

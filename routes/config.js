@@ -5,6 +5,6 @@ Router.configure({
 	notFoundTemplate: 'notFound',
 
 	// Usually subscribe to certain collections here.
-	// waitOn: function() {}
+	// waitOn: function() { }
 
 });

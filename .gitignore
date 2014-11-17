@@ -1,4 +1,2 @@
-# some things you might not want to be added to the git commits.
-
-#settings.json 
-#mup.json
+settings.json
+mup.json
