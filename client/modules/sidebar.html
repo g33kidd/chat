@@ -9,6 +9,23 @@
 			{{/if}}
 			{{> userActions}}
 		</div>
+		
+		{{#if currentUser}}
+		<div class="section user-actions">
+			<a href="{{pathFor 'main'}}" class="action home">
+				<i class="fa fa-home"></i>
+			</a>
+			<a class="action twitter-chats">
+				<i class="fa fa-twitter"></i>
+			</a>
+			<a class="action new">
+				<i class="fa fa-plus"></i>
+			</a>
+			<a class="action settings">
+				<i class="fa fa-cogs"></i>
+			</a>
+		</div>
+		{{/if}}
 
 		{{#if currentUser}}
 		<div class="section my-chats">
