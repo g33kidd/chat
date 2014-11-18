@@ -2,7 +2,9 @@
 	<div class="sidebar">
 		<div class="user">
 			{{#if currentUser}}
-				<div class="avatar">{{currentUser.services.twitter.profileUrl}}</div>
+				<div class="profile">
+					<img src="{{currentUser.services.twitter.profile_image_url}}" class="profile_image">
+				</div>
 				<div class="username">{{currentUser.services.twitter.screenName}}</div>
 			{{/if}}
 			{{> userActions}}
@@ -12,7 +14,7 @@
 		<div class="section my-chats">
 			<div class="section-header">
 				<div class="title">My Chats</div>
-				<div class="new">New</div>
+				<a href="#" class="new">New</a>
 			</div>
 			<div class="chats">
 				{{#each myChats}}
@@ -25,7 +27,7 @@
 		<div class="section public-chats">
 			<div class="section-header">
 				<div class="title">Public Chats</div>
-				<div class="new">New</div>
+				<a href="#" class="new">New</a>
 			</div>
 			<div class="chats">
 				{{#each chats}}
