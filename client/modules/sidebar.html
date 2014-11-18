@@ -1,34 +1,48 @@
 <template name="sidebar">
-
 	<div class="sidebar">
 		<div class="user">
 			{{#if currentUser}}
-				{{currentUser.services.twitter.screenName}}
+				<div class="avatar">{{currentUser.services.twitter.profileUrl}}</div>
+				<div class="username">{{currentUser.services.twitter.screenName}}</div>
 			{{/if}}
 			{{> userActions}}
 		</div>
 
 		{{#if currentUser}}
 		<div class="section my-chats">
-			<div class="title">My Chats</div>
-			{{#each myChats}}
-				<div class="chat">
-					<a href="{{pathFor 'chat'}}">{{name}}</a>
-				</div>
-			{{/each}}
+			<div class="section-header">
+				<div class="title">My Chats</div>
+				<div class="new">New</div>
+			</div>
+			<div class="chats">
+				{{#each myChats}}
+					{{> chatMenuItem}}
+				{{/each}}
+			</div>
 		</div>
 		{{/if}}
 		
 		<div class="section public-chats">
-			<div class="title">Public Chats</div>
-			{{#each chats}}
-				<div class="chat">
-					<a href="{{pathFor 'chat'}}">{{name}}</a>
-				</div>
-			{{/each}}
+			<div class="section-header">
+				<div class="title">Public Chats</div>
+				<div class="new">New</div>
+			</div>
+			<div class="chats">
+				{{#each chats}}
+					{{> chatMenuItem}}
+				{{/each}}
+			</div>
 		</div>
 	</div>
+</template>
 
+<template name="chatMenuItem">
+	<div class="chat">
+		<a href="{{pathFor 'chat'}}">
+			<div class="name">{{name}}</div>
+			<div class="count">{{userCount}}</div>
+		</a>
+	</div>
 </template>
 
 <template name="userActions">

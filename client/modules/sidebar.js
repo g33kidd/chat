@@ -23,3 +23,9 @@ Template.userActions.events({
 		});
 	}
 });
+
+Template.chatMenuItem.helpers({
+	userCount: function() {
+		return "10";
+	}
+})

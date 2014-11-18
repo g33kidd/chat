@@ -1,7 +1,3 @@
-Template.chat.rendered = function() {
-	$(".main-content").animate({ scrollTop: $('.main-content')[0].scrollHeight}, 200);
-}
-
 Template.chat.events({
 
 	'keyup .chat-composer': function(e) {
@@ -14,7 +10,7 @@ Template.chat.events({
 
 			Chats.update(this._id, {$addToSet: {messages: message}}, function() {
 				$('.chat-composer').val('');
-				$('.main-content').scrollTop($('.main-content').height());
+				$('.main-content').scrollTop($('.main-content').prop("scrollHeight"));
 				$('.chat-composer').focus();
 			});
 		}
