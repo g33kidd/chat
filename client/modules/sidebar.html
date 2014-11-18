@@ -5,7 +5,7 @@
 				<div class="profile">
 					<img src="{{currentUser.services.twitter.profile_image_url}}" class="profile_image">
 				</div>
-				<div class="username">{{currentUser.services.twitter.screenName}}</div>
+				<div class="username">{{currentUser.profile.name}}</div>
 			{{/if}}
 			{{> userActions}}
 		</div>
@@ -27,7 +27,6 @@
 		<div class="section public-chats">
 			<div class="section-header">
 				<div class="title">Public Chats</div>
-				<a href="#" class="new">New</a>
 			</div>
 			<div class="chats">
 				{{#each chats}}
@@ -39,12 +38,12 @@
 </template>
 
 <template name="chatMenuItem">
+	<a href="{{pathFor 'chat'}}">
 	<div class="chat">
-		<a href="{{pathFor 'chat'}}">
-			<div class="name">{{name}}</div>
-			<div class="count">{{userCount}}</div>
-		</a>
+		<div class="name">{{name}}</div>
+		<div class="count">{{userCount}}</div>
 	</div>
+	</a>
 </template>
 
 <template name="userActions">

@@ -1,22 +1,63 @@
+// .message-block {
+// 	margin:0 10px;
+// 	padding:1px 0px;
+// 	font-family:'Lato', sans-serif;
+// 	.username {
+// 		font-size:14px;
+// 		margin-bottom:5px;
+// 	}
+// 	.message {
+// 		font-size:16px;
+// 	}
+// 	.timeago {
+// 		float:right;
+// 		font-size:12px;
+// 	}
+// 	&:after {
+// 		display:block;
+// 		content:" ";
+// 		clear:both;
+// 	}
+// }
+
 .message-block {
-	margin:0 10px;
-	padding:1px 0px;
-	font-family:'Lato', sans-serif;
-	.username {
-		font-size:14px;
-		margin-bottom:5px;
-	}
-	.message {
-		font-size:16px;
-	}
-	.timeago {
-		float:right;
-		font-size:12px;
-	}
-	&:after {
+	margin:0px 10px;
+	padding-top:10px;
+	font-family: 'Lato', sans-serif;
+	.profile {
 		display:block;
-		content:" ";
-		clear:both;
+		.profile-image {
+			float:left;
+			width:30px;
+			height:30px;
+			padding:0px 10px;
+			img {
+				width:30px;
+				height:30px;
+			}
+		}
+		.details {
+			float:left;
+			.username {
+				font-size:14px;
+				margin-right:10px;
+			}
+			.timeago {
+				padding-top:3px;
+				font-size:10px;
+			}
+		}
+		&:after {
+			content: " ";
+			display:block;
+			clear:both;
+		}
+	}
+
+	.message-content {
+		margin-left:50px;
+		padding-top:5px;
+		padding-bottom:10px;
 	}
 }
 

@@ -26,6 +26,6 @@ Template.userActions.events({
 
 Template.chatMenuItem.helpers({
 	userCount: function() {
-		return "10";
+		return getParticipantCount(this._id);
 	}
 })
