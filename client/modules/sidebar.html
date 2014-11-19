@@ -15,7 +15,7 @@
 			<a href="{{pathFor 'main'}}" class="action home">
 				<i class="fa fa-home"></i>
 			</a>
-			<a href="#" class="action twitter-chats">
+			<a href="#" class="action twitter-chats" id="post-tweet-test">
 				<i class="fa fa-twitter"></i>
 			</a>
 			<a href="#" class="action new" id="new-post-action">
@@ -28,6 +28,7 @@
 		{{/if}}
 
 		{{#if currentUser}}
+		{{#if hasAnyChats}}
 		<div class="section my-chats">
 			<div class="section-header">
 				<div class="title">My Chats</div>
@@ -39,6 +40,7 @@
 				{{/each}}
 			</div>
 		</div>
+		{{/if}}
 		{{/if}}
 		
 		<div class="section public-chats">

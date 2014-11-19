@@ -12,4 +12,6 @@ accounts-ui
 less
 mrt:moment
 linto:fontawesome
+sewdn:twitter-api
+mrt:twit
 

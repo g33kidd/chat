@@ -14,6 +14,9 @@ Template.sidebar.rendered = function() {
 };
 
 Template.sidebar.helpers({
+	hasAnyChats: function() {
+		return Chats.find({userId: Meteor.userId()}).count() === 0 ? false : true;
+	},
 
 	myChats: function() {
 		return Chats.find({userId: Meteor.userId()});
