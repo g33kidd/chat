@@ -1,9 +1,15 @@
-<template name="new">
+<template name="newChat">
     
-    <div class="overlay"></div>
-    <div class="new-modal">
-        <div class="title"></div>
-        
+    <div id="overlay" class="overlay"></div>
+    <div class="new-modal effect">
+        <div class="title">New Chat</div>
+        <div class="content">
+        	<div class="errors"></div>
+        	<div class="new-chat">
+        		<input type="text" class="chatname" id="chatName" placeholder="Chat Name">
+        		<button class="create-chat btn">Create</button>
+        	</div>
+        </div>
     </div>
 
 </template>

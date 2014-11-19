@@ -6,5 +6,8 @@ Router.configure({
 
 	// Usually subscribe to certain collections here.
 	// waitOn: function() { }
+	onAfterAction: function() {
+		closeModal();
+	}
 
 });

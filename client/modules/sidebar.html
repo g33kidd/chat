@@ -15,13 +15,13 @@
 			<a href="{{pathFor 'main'}}" class="action home">
 				<i class="fa fa-home"></i>
 			</a>
-			<a class="action twitter-chats">
+			<a href="#" class="action twitter-chats">
 				<i class="fa fa-twitter"></i>
 			</a>
-			<a class="action new">
+			<a href="#" class="action new" id="new-post-action">
 				<i class="fa fa-plus"></i>
 			</a>
-			<a class="action settings">
+			<a href="#" class="action settings">
 				<i class="fa fa-cogs"></i>
 			</a>
 		</div>
@@ -57,7 +57,7 @@
 <template name="chatMenuItem">
 	<a href="{{pathFor 'chat'}}">
 	<div class="chat">
-		<div class="name">{{name}}</div>
+		<div class="name">{{displayName}}</div>
 		<div class="count">{{userCount}}</div>
 	</div>
 	</a>

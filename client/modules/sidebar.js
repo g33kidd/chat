@@ -1,3 +1,18 @@
+Template.sidebar.events({
+	'click #new-post-action': function(e, tmpl) {
+		if(Session.get('new-post-modal-action') === false) {
+			openModal();
+			$('#chatName').focus();
+		}else{
+			closeModal();
+		}
+	}
+});
+
+Template.sidebar.rendered = function() {
+	Session.set('new-post-modal-action', false);
+};
+
 Template.sidebar.helpers({
 
 	myChats: function() {
@@ -25,6 +40,14 @@ Template.userActions.events({
 });
 
 Template.chatMenuItem.helpers({
+	displayName: function() {
+		if(!this.displayName){
+			return this.name;
+		}else{
+			return this.displayName;
+		}
+	},
+	
 	userCount: function() {
 		return getParticipantCount(this._id);
 	}
