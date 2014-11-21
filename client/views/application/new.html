@@ -1,14 +1,31 @@
 <template name="newChat">
     
     <div id="overlay" class="overlay"></div>
-    <div class="new-modal effect">
-        <div class="title">New Chat</div>
-        <div class="content">
-        	<div class="errors"></div>
-        	<div class="new-chat">
-        		<input type="text" class="chatname" id="chatName" placeholder="Chat Name">
-        		<button class="create-chat btn">Create</button>
-        	</div>
+
+    <div id="new-chat" class="modal effect">
+        <div class="modal-title">Create New Chat</div>
+        <div class="modal-content">
+            <input type="text" class="big">
+            <div class="form-section">
+                <div class="helper-text">
+                    <span class="big">Want to invite a few people?</span>
+                    <div class="small">Type their username or email address and press enter.</div>
+                </div>
+            </div>
+            <div class="form-section">
+                <div class="checkbox">
+                    <div class="helper-text">Is this going to be a private chat?</div>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <!-- <div class="form-section">
+                <span class="big">Enable twitter stream for a hangout?</span>
+                <span class="small">Type the hashtag(s) you want to stream. This is optional.</span>
+            </div> -->
+        </div>
+        <div class="modal-footer">
+            <button class="cancel btn">Cancel</button>
+            <button class="create btn">Create Chat!</button>
         </div>
     </div>
 
