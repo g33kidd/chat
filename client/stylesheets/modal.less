@@ -28,14 +28,14 @@
     transition: all 0.3s;
 }
 
-.new-modal {
+.modal {
     font-family:'Lato', sans-serif;
     position:fixed;
     top:50%;
     left:50%;
     width:500px;
     margin-top:-200px;
-    margin-left:-250px;
+    margin-left:-150px;
     background-color:#fff;
     color:#333;
     visibility: hidden;
@@ -62,11 +62,78 @@
         }
     }
 
-    .title {
-        background-color:#36536B;
-        padding:10px 15px;
-        font-size:20px;
+    .modal-title {
+        color:#333;
+        padding:20px 15px;
+        font-size:25px;
+        text-align:center;
+    }
+
+    .modal-content {
+        background-color:#507593;
+        padding:20px 30px;
         color:#fff;
+        input[type="text"] {
+            outline:none;
+            &.big {
+                font-size:25px;
+                padding:10px 5%;
+                display:block;
+                border-width:0;
+                width:90%;
+            }
+        }
+        .form-section {
+            padding:20px 0px;
+            .helper-text {
+                .big {
+                    font-size:18px;
+                    display:block;
+                    color:#fff;
+                    padding:5px 0px;
+                    font-weight:300;
+                }
+                .small {
+                    color:#77A0C0;
+                    font-size:14px;
+                    display:block;
+                    font-weight:300;
+                }
+            }
+        }
+    }
+
+    .modal-footer {
+        padding:20px 15px;
+        .btn {
+            border:0;
+            padding:10px 15px;
+            background-color:transparent;
+            font-size:20px;
+            -webkit-transition: all 150ms ease;
+            -o-transition: all 150ms ease;
+            transition: all 150ms ease;
+            cursor:pointer;
+        }
+        .cancel {
+            float:left;
+            color:#78BBD4;
+            &:hover {
+                color:darken(#507593, 10%);
+            }
+        }
+        .create {
+            float:right;
+            color:#507593;
+            &:hover {
+                color:lighten(#507593, 10%);
+            }
+        }
+        &:after {
+            content: " ";
+            display:block;
+            clear:both;
+        }
     }
 
     .content {
