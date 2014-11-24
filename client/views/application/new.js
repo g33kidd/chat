@@ -1,14 +1,13 @@
 Template.newChat.events({
 
-	'click .create-chat': function(e) {
-		var chatName = $('#chatName').val();
+	'click .create': function(e, tmpl) {
+		var chatName = $('#chat-name').val();
 		var newChatName = "";
 		if(chatName === "") {
-			$('#chatName').css('border', '1px solid red');
-			$('.errors').html('Title can\'t be blank!');
+			$('#chat-name').css('border', '2px solid #935050');
 		}else{
+			$('#chat-name').css('border', '0');
 			newChatName = chatName.replace(/\s+/g, '-').toLowerCase();
-
 			if(Chats.find({name: newChatName}).count() === 0) {
 				var chat = Chats.insert({
 					userId: Meteor.userId(),
